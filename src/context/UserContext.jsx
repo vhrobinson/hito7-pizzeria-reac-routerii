@@ -6,7 +6,7 @@ const UserContext = createContext();
 
 
 export const UserProvider = ({ children }) => {
-  const [token, setToken] = useState(false); 
+  const [token, setToken] = useState(true); 
   const logout = () =>{
     setToken(false)
   }
