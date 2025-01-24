@@ -42,7 +42,7 @@ function Cart() {
                             <h3>${total.toLocaleString()}</h3>
                             
                             <button
-                             disabled={!token}
+                             disabled={token}
                             className={ `text-white p-4 rounded mt-2 ${
                                 token ? "bg-green-500" : "bg-gray-600 cursor-not-allowed"}`
                             }>
