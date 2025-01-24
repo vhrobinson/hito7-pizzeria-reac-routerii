@@ -1,8 +1,10 @@
 import { usePizza } from "../../context/PizzaContext";
+import { useUser } from "../../context/UserContext";
 
 function Cart() {
     const { total } = usePizza();
     const { carro, setCarro } = usePizza();
+    const { token} = useUser()
 
     const handleAgregar = (index) => {
         setCarro(carro.map((pizza, i) => 
@@ -38,7 +40,12 @@ function Cart() {
                      {carro.length > 0 && (
                         <div className="flex items-center p-4 border rounded-lg shadow-lg">
                             <h3>${total.toLocaleString()}</h3>
-                            <button className="bg-green-500 text-white p-4 rounded mt-2">
+                            
+                            <button
+                             disabled={!token}
+                            className={ `text-white p-4 rounded mt-2 ${
+                                token ? "bg-green-500" : "bg-gray-600 cursor-not-allowed"}`
+                            }>
                                 Pagar
                             </button>
                         </div>
