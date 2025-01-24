@@ -8,6 +8,7 @@ const Navbar = () => {
   const { total } = usePizza();
   const { carro } = usePizza();
   const { token } = useUser();
+  const {logout} = useUser();
 
 
   const totalItems = carro.reduce((acc, pizza) => acc + pizza.count, 0);
@@ -49,7 +50,7 @@ const Navbar = () => {
                     <div>
                            
                     <Link to={'/'} href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Profile</Link>
-                    <Link to={'/'} href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Logout</Link>
+                    <button onClick ={()=> logout() }  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Logout</button>
                     </div>
                 ):(
                     <div>
