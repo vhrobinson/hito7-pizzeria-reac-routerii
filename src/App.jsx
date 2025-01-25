@@ -5,9 +5,11 @@ import Home from './pages/Home'
 import Cart from './pages/components/Cart'
 import LoginPage from './pages/components/LoginPage'
 import Register from './pages/components/Register'
+import Profile from './pages/components/Profile'
 
 
 import { Routes,Route, Navigate } from 'react-router-dom'
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/pizza/:id' element={<Pizza/>} />
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/profile' element={<Profile/>}/>
             <Route path='/login' element={<LoginPage/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/*' element={<Navigate to={'/'}/>}/>
