@@ -6,8 +6,6 @@ import Cart from './pages/components/Cart'
 import LoginPage from './pages/components/LoginPage'
 import Register from './pages/components/Register'
 import Profile from './pages/components/Profile'
-
-
 import { Routes,Route, Navigate } from 'react-router-dom'
 
 
